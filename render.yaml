@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: katukas-kitchen
+    env: docker
+    plan: starter
+    healthCheckPath: /api/health
+    envVars:
+      - key: ADMIN_KEY
+        sync: false
+      - key: PAYSTACK_PUBLIC_KEY
+        sync: false
+      - key: PAYSTACK_SECRET_KEY
+        sync: false
+      - key: WHATSAPP_NUMBER
+        sync: false
